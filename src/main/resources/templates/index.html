@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscador de Jugadores</title>
+    <!-- Agrega el enlace a Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Agrega tu archivo de estilos personalizados aquí si lo tienes -->
+    <link href="styles.css" rel="stylesheet">
+    <style>
+        .cuerpo {
+            background-image: url('https://www.larepublica.net/storage/images/2020/09/11/20200911104307.politica-deportiva.x2.jpg'); /* Reemplaza 'ruta/a/tu/imagen.jpg' con la ruta a tu imagen de fondo */
+            background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el fondo */
+            background-position: center; /* Centra la imagen en el fondo */
+            background-repeat: no-repeat; /* Evita la repetición de la imagen */
+        }
+    </style>
+</head>
+<body>
+
+<!-- Barra de navegación -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Buscador de Jugadores</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="#">Inicio</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Acerca de</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{/registrar/}">Registrarse</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Contacto</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Encabezado de la página -->
+<header class="jumbotron">
+    <div class="container">
+        <h1 class="display-4">¡Bienvenido al Buscador de Jugadores!</h1>
+        <p class="lead">En este sitio nos encargamos de tomar tus datos y habilidades para poder matchearte con MILES DE CLUBES EN EL MUNDO</p>
+        
+    </div>
+</header>
+
+<!-- Contenido principal -->
+<div class="cuerpo">
+    <div class="row">
+        <div class="col-md-6">
+            <h2>CARGAS TUS DATOS</h2>
+            <p>Llenado un simple formulario ya podemos conectarte junto a un grupo de profesionales a Miles de clubes al rededor del mundo</p>
+        </div>
+    </div>
+</div>
+
+<!-- Pie de página -->
+<footer class="bg-dark text-light text-center py-3">
+    <p>&copy; 2023 BUSCADOR DE JUGADORES</p>
+</footer>
+
+<!-- Agrega el enlace a Bootstrap JS y jQuery (opcional) si es necesario -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

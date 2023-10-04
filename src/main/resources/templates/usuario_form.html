@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Registro de Usuario</title>
+    <!-- Agrega el enlace a Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-5">Registro de Usuario</h1>
+        <form th:action="@{/registro/}" method="POST">
+            <div class="form-group">
+                <label for="nombre">Nombre:</label>
+                <input type="text" name="nombre" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="username">User Name:</label>
+                <input type="text" name="username" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="apellido">Apellido:</label>
+                <input type="text" name="apellido" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="email">Correo Electrónico:</label>
+                <input type="email" name="email" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="contrasenia">Contraseña:</label>
+                <input type="password" name="password" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="edad">Edad:</label>
+                <input type="number" name="edad" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="rol">Rol:</label>
+                <select name="rol" class="form-control">
+                    <option value="JUGADOR">Jugador</option>
+                    <option value="CLUB">Club</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="posicion">Posición:</label>
+                <input type="text" name="posicion" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="categoria">Categoría:</label>
+                <select name="categoria" class="form-control">
+                    <option value="SUB15">Sub-15</option>
+                    <option value="SUB18">Sub-18</option>
+                    <option value="SUB21">Sub-21</option>
+                    <option value="MAYORES">Mayores</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="deporte">Deporte:</label>
+                <select name="deporte" class="form-control">
+                    <option value="FUTBOL">Fútbol</option>
+                    <option value="BASQUET">Basquet</option>
+                    <option value="HANDBALL">Handball</option>
+                    <option value="VOLEY">Voley</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="sobreMi">Historial Deportivo:</label>
+                <textarea name="sobreMi" class="form-control"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Registrar</button>
+        </form>
+        <div th:if="${exito}!=null" class="alert alert-success mt-3">
+            <h5 class="alert-heading">Éxito!</h5>
+            <p th:text="${exito}"></p>
+        </div>
+        <div th:if="${error}!=null" class="alert alert-danger mt-3">
+            <h5 class="alert-heading">Error 👎</h5>
+            <p th:text="${error}"></p>
+        </div>
+        <section class="text-center mt-3">
+            <div class="row">
+                <div class="col">
+                    <a th:href="@{/}" class="btn btn-secondary">Volver</a>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- Agrega el enlace a Bootstrap JS y jQuery (opcional) si es necesario -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+
